@@ -5,6 +5,7 @@ import org.junit.jupiter.api.TestInstance;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.LoginPage;
+import pages.MainPage;
 import util.CredentialManager;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -15,6 +16,7 @@ public abstract class AbstractLoginPage {
     protected WebDriver driver = new ChromeDriver();
 
     LoginPage loginPage;
+    MainPage mainPage;
 
     @BeforeEach
     public void Preconditions() {
@@ -23,7 +25,8 @@ public abstract class AbstractLoginPage {
 
     @AfterEach
     public void PostCondition() {
-        loginPage.logout();
+        mainPage = new MainPage(driver);
+        mainPage.logout();
     }
 
     @AfterAll
