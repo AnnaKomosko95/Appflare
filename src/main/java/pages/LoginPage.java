@@ -68,6 +68,6 @@ public class LoginPage {
     public void waitForLogin() {
         wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.urlToBe(link));
-    }
+        }
 
 }

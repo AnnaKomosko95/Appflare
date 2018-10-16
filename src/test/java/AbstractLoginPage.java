@@ -15,7 +15,6 @@ public abstract class AbstractLoginPage {
     CredentialManager getAdminCredentialsWithSpaces = new CredentialManager("ad min", "admin");
 
 
-
     protected WebDriver driver = new ChromeDriver();
     //protected WebDriver driver = new FirefoxDriver();
 
