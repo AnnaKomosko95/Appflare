@@ -21,7 +21,7 @@ public class MainPage {
     }
 
     public void logout() {
-        wait = new WebDriverWait(driver, 30);
+        wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className(classLoading)));
         openMenu = driver.findElement(By.xpath(xpathMainMenu));
         openMenu.click();
