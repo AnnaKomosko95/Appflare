@@ -7,8 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.CredentialManager;
 
-import static org.openqa.selenium.By.xpath;
-
 public class LoginPage {
     WebDriver driver;
     WebElement inputLogin;
@@ -33,7 +31,7 @@ public class LoginPage {
         openPage();
         this.inputLogin = driver.findElement(By.id(idInputLogin));
         this.inputPassword = driver.findElement(By.id(idInputPassword));
-        this.btnLogin = driver.findElement(xpath(xpathButtonLogin));
+        this.btnLogin = driver.findElement(By.xpath(xpathButtonLogin));
     }
 
     public void openPage(){
